@@ -11,7 +11,8 @@ RUN apk update && \
 		mv /tmp/rancher-${RANCHER_CLI_VERSION}/rancher /usr/local/bin/rancher && \
 		chmod +x /usr/local/bin/rancher
 
-RUN apk --no-cache add curl 
+RUN apk --no-cache add curl
+RUN apk --no-cache add git
 
 # Define working directory.
 WORKDIR /workspace
